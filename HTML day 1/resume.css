@@ -1,0 +1,104 @@
+.main{
+    border: 0px solid black;
+    height: 950px;
+    width: 650px;
+    margin-left: 300px;
+    background-color: black;
+
+    
+}
+.left{
+    border: 0px solid black;
+    height: 950px;
+    width: 250px;
+    float: left;
+   
+    background-color:rgb(69, 69, 80)
+}
+#contact{
+    text-align: center;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+}
+.info{
+    font-size: 14px;
+    margin-left: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    
+    
+}.education{
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#edu{
+    font-size: 14px;
+    margin-left: 0px;
+    list-style-type: none;
+    margin-left: 12px;
+    font-size: 22px;
+    margin-top: 20px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
+}
+#edu1{
+    font-size: 14px;
+    margin-left: 0px;
+    list-style-type: none;
+    margin-left: 12px;
+    font-size: 22px;
+    margin-top: 20px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
+}
+#edu2{
+    font-size: 14px;
+    margin-left: 0px;
+    list-style-type: none;
+    margin-left: 12px;
+    font-size: 22px;
+    margin-top: 20px;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#skills{
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+#hobbies{
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.info p a{
+    text-decoration: none;
+    color: wheat;
+
+}
+.right{
+    border: 0px solid black;
+    height: 950px;
+    width: 378px;
+    float: right;
+
+   
+    background-color:rgb(219, 219, 219)
+}
+.right-mid{
+    border: 1px solid black;
+    background-color: black;
+    width: 100px;
+    height: 100px
+}
+#pro{
+    margin-right: 10px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background-image: url(img1.jpeg);
+        background-repeat: no-repeat;
+        background-position :center;
+      }
+      table,tr,td,th{
+        border: 1px solid black;
+        border-collapse: collapse;
+        
+      }
+      td,th{
+        padding: 10px;
+        text-align: center;
+      }
+      th{
+        background-color: blue;
+      }
+      tr:nth-child(even){
+        background-color: red;
+      }
+      tr:hover{
+        background-color: burlywood;
+      }
+      #button{
+    
+        border: 1px solid black;
+        display: block;
+        width: 50px;
+        margin:5px;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: red;
+        text-align: center;
+      }
+      #button a{
+        text-decoration: none;
+        color: white;
+        
+        
+      }
+      #button:hover{
+        background-color: black;
+      }
+    </style>
+</head>
+<body>
+    <h1 style="color: blue ; background-color: orange;">student information</h1>
+    <table >
+     
+    <tr>
+      <th>roll no</th>
+      <th>name</th>
+      <th>course</th>
+      <th>percentage</th></tr>
+    
+    <tr>
+      <td>2</td>
+      <td>rupesh</td>
+      <td>mca</td>
+      <td>89</td>
+    </tr>
+    
+    <tr>
+      <td>3</td>
+      <td>ajay</td>
+      <td>mca</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>dheeraj</td>
+      <td>mca</td>
+      <td>78</td>
+    </tr>
+    </table>
+    <div id="button">
+    <a href="resume.html">resume</a>
+    </div>
+    <div id="button">
+      <a href="list.html">List</a>
+      </div>
+</body>
+</html>
