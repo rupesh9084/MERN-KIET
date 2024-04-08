@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container d-flex justify-content-center flex-column text-center m-2">
+    <h1>Student Registration</h1>
+    <div class="border border-1 border-danger rounded p-2 col-4 mx-auto"> 
+      <form name="studentFrm" class="text-start" onsubmit="return validate();">
+         <div>
+            <label>Enter student name</label><br>
+            <input type="text" name="name" id="name" class="col-12"/><br>
+            <p id="nameErr" class="text-danger"></p>
+         </div>
+         <div>
+            <label>Enter mobile number</label><br>
+            <input type="tel" maxlength="12" name="mobile" id="mobile" class="col-12"/><br>
+            <p id="mobileErr" class="text-danger"></p>
+         </div>
+         <div>
+            <label>Enter email</label><br>
+            <input type="email" name="email" id="email" class="col-12"/><br>
+            <p id="emailErr" class="text-danger"></p>
+         </div>
+         <div>
+            <label>Select your hobbies</label><br>
+            <div class="border border-1 border-danger rounded p-2">
+            <input type="checkbox" name="hobbies" id="hobbies" value="Music"/> Music
+            <input type="checkbox" name="hobbies" id="hobbies" value="Dancing"/> Dancing
+            <input type="checkbox" name="hobbies" id="hobbies" value="Singing"/> Singing
+            <p id="hobbieErr" class="text-danger"></p>
+            </div>
+         <div>
+            <label>Select your language</label><br>
+            <select name="lang">
+            <option value="Select"/> Select </option>
+            <option value="Java"/> Java </option>
+            <option value="JavaScript"/> JavaScript </option>
+            <option value="Kotlin"/> Kotlin </option>           
+            </select>
+            <p id="langErr" class="text-danger"></p>
+         </div>
+         <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-outline-warning" name="submit" id="submit">Register</button>
+         </div>
+      </form>
+    </div>
+    </div>
+    <script>
+        const printError=(id,msg)=>{
+    document.getElementById(id).innerHTML=msg;
+}
+const validate=()=>{
+    let nameErr=mmobileErr=emailErr=hobbieErr=langErr=true;
+    let data={
+        name:"",
+        mobile:"",
+        email:"",
+        hobbies:[],
+        lang:"",
+    }
+      const name=document.studentFrm.name.value;
+      const mobile=document.studentFrm.mobile.value;
+      const email=document.studentFrm.email.value;
+      const hobbies=document.getElementsByName("hobbies");
+      const lang=document.studentFrm.lang.value;
+      if (name===""){
+        printError("nameErr","Please enter your name");
+      } else {
+        printError("nameErr","");
+        data={...data,name};
+        nameErr=false;
+      }
+      if (mobile===""){
+        printError("mobileErr","Please enter mobile number");
+      } else {
+        printError("mobileErr","");
+        data={...data,mobile};
+        mmobileErr=false;
+      }
+      if (email===""){
+        printError("emailErr","Please enter email");
+      } else {
+        printError("emailErr","");
+        data={...data,email};
+        emailErr=false;
+      }
+      if (hobbies.length>0){
+          for (let hobbie of hobbies)
+          {
+             if(hobbie.checked===true){
+                data.hobbies.push(hobbie.value);
+             }
+          }
+          if (data.hobbies.length>0){
+               printError("hobbieErr","");
+               hobbieErr=false;
+          } else {
+                printError("hobbieErr","Select your hoppies");
+          }
+      }
+       if (lang==="Select"){
+        printError("langErr","Select your language");
+       } else {
+        printError("langErr","");
+        data={...data,lang};
+        langErr=false;
+       }
+       
+     if(nameErr || mmobileErr || emailErr || hobbieErr || langErr)   
+     {
+        return false;
+     }  else {
+        alert(JSON.stringify(data));
+        return true;
+     }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>sum calculation</h1>
+    <p id="result">sum of 2+2 =</p>
+    <button id="sum">click me</button>
+    <script>
+    const sum=document.getElementById("sum")
+    // let add=()=>{
+    //      let old=document.getElementById("result").innerHTML
+    //     document.getElementById("result").innerHTML=old+(2+2)
+    
+    // }
+    // sum.addEventListener("click",add)
+    let add=()=>{
+        let num=prompt("enter the num 1")
+        let num2=prompt("enter the num 2")
+        let sum=`sum of ${num} and ${num1} is ${parseInt(num)}+${parseInt(num1)}`
+        document.getElementById("result").innerHTML=sum
+    
+    }
+    sum.addEventListener("click",add)
+
+   
+    </script>
+</body>
+</html>
